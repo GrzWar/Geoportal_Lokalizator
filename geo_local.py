@@ -198,22 +198,26 @@ class GeoportalLokalizator:
             transformContext = QgsProject.instance().transformContext()
             xform = QgsCoordinateTransform(crs, crsDest, transformContext)
 
+            # extent in epsg=2180
             extent_2180 = xform.transformBoundingBox(extent)
 
+            # extracting the coordinates
             xmin_2180 = extent_2180.xMinimum()
             ymin_2180 = extent_2180.yMinimum()
             xmax_2180 = extent_2180.xMaximum()
             ymax_2180 = extent_2180.yMaximum()
 
-            bb2 = "https://mapy.geoportal.gov.pl/imap/Imgp_2.html?composition=default&bbox=" + str(extent_2180.xMinimum()) + "," + str(ymin_2180) + "," + str(xmax_2180) + "," + str(ymax_2180)
-            webbrowser.open(bb2, new=2)
+            # creating proper url
+            url = "https://mapy.geoportal.gov.pl/imap/Imgp_2.html?composition=default&bbox=" + str(extent_2180.xMinimum()) + "," + str(ymin_2180) + "," + str(xmax_2180) + "," + str(ymax_2180)
+            #opening url
+            webbrowser.open(url, new=2)
 
-
-
-
-
+        #defining CRS used in project
         crsSrc = iface.mapCanvas().mapSettings().destinationCrs()
+
+        # defining extent of the canvas
         extent = iface.mapCanvas().extent()
 
+        #running function that opens a geoportal
         geoportal(crsSrc, extent)
 
