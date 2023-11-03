@@ -168,9 +168,6 @@ class GeoportalLokalizator:
             text=self.tr(u'Geoportal-lokalizator'),
             callback=self.run,
             parent=self.iface.mainWindow())
-        #self.toolButton = QToolButton()
-
-        #self.toolButton = QToolButton()
 
         # will be set False in run()
         self.first_start = True
@@ -208,7 +205,7 @@ class GeoportalLokalizator:
             ymax_2180 = extent_2180.yMaximum()
 
             # creating proper url
-            url = "https://mapy.geoportal.gov.pl/imap/Imgp_2.html?composition=default&bbox=" + str(extent_2180.xMinimum()) + "," + str(ymin_2180) + "," + str(xmax_2180) + "," + str(ymax_2180)
+            url = "https://mapy.geoportal.gov.pl/imap/Imgp_2.html?composition=default&bbox=" + str(xmin_2180) + "," + str(ymin_2180) + "," + str(xmax_2180) + "," + str(ymax_2180)
             #opening url
             webbrowser.open(url, new=2)
 

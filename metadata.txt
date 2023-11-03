@@ -5,12 +5,12 @@
 [general]
 name=Geoportal Lokalizator
 qgisMinimumVersion=3.0
-description=Wtyczka otwiera geoportal w tej samej lokalizacji w której jest otwarty QGIS
-version=0.1
+description=PL: Wtyczka otwiera rządowy geoportal w tej samej lokacji w której użytkownik ma otwarty canvas QGIS-a. EN: The plugin opens the government geoportal in the same location where the user has the QGIS canvas open (Poland only).
+version=0.2
 author=Grzegorz Warszycki
 email=opti33@gmail.com
 
-about=Wtyczka otwiera geoportal w tej samej lokacji w której użytkownik ma otwarty canvas QGIS-a
+about=Wtyczka otwiera geoportal w tej samej lokacji w której użytkownik ma otwarty canvas QGIS-a.
 
 tracker=https://github.com/GrzWar/Geoportal_Lokalozator/issues
 repository=https://github.com/GrzWar/Geoportal_Lokalozator
